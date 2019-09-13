@@ -18,11 +18,8 @@ void main ()
     int choice =0;  
     while(choice != 8)   
     {  
-        //printf("\n\n*********Main Menu*********\n");  
-        //printf("\nChoose one option from the following list ...\n");  
-        //printf("\n===============================================\n");  
         printf("\n1.Insert in begining 2.Insert in end 3.Insert between 4.Display 5.delete element at beginning 6.Delete at end 7.delete at a location 8.Exit\n"); 
-	 printf("Enter your choice?");         
+	printf("Enter your choice?");         
         scanf("\n%d",&choice);  
         switch(choice)  
         {  
