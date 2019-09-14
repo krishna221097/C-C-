@@ -1,0 +1,49 @@
+        -:    0:Source:check.c
+        -:    0:Graph:check.gcno
+        -:    0:Data:check.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include<stdio.h>
+        -:    2:
+        -:    3:void new_func1(void);
+        -:    4:
+        1:    5:void func1(void)
+        -:    6:{
+        1:    7:    printf("\n Inside func1 \n");
+        1:    8:    int i = 0;
+        -:    9:
+        1:   10:    for(;i<0xffffffff;i++);
+        1:   11:    new_func1();
+        -:   12:
+        1:   13:    return;
+        -:   14:}
+        -:   15:
+        1:   16:static void func2(void)
+        -:   17:{
+        1:   18:    printf("\n Inside func2 \n");
+        1:   19:    int i = 0;
+        -:   20:
+        1:   21:    for(;i<0xffffffaa;i++);
+        1:   22:    return;
+        -:   23:}
+        1:   24:void new_func1(void)
+        -:   25:{
+        1:   26:    printf("\n Inside new_func1()\n");
+        1:   27:    int i = 0;
+        -:   28:
+        1:   29:    for(;i<0xffffffee;i++);
+        -:   30:
+        1:   31:    return;
+        -:   32:}
+        1:   33:int main(void)
+        -:   34:{
+        1:   35:    printf("\n Inside main()\n");
+        1:   36:    int i = 0;
+        -:   37:
+        1:   38:    for(;i<0xffffff;i++);
+        1:   39:    func1();
+        1:   40:    func2();
+        -:   41:
+        1:   42:    return 0;
+        -:   43:}
+        -:   44:
