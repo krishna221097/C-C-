@@ -1,0 +1,18 @@
+ans='y'
+while [ $ans = 'y' ]
+do 
+echo "Program to perform operations"
+echo "Enter 1st numbers"
+read num1
+echo "Enter 2nd numbers"
+read num2
+echo "Enter 1 to add, 2 to subtract , 3 to multiply "
+read choice
+case $choice in
+1)echo "$num1 + $num2 =`expr $num1 + $num2`";;
+2)echo "$num1 - $num2 =`expr $num1 - $num2`";;
+3)echo "$num1 * $num2 =`expr $num1 \* $num2`";;
+esac
+echo "Enter Choice : Enter y to continue or n to exit"
+read ans
+done
