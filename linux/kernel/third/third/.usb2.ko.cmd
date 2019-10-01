@@ -1,0 +1,1 @@
+cmd_/home/student/krishna/linux/kernel/third/third/usb2.ko := ld -r -m elf_i386 -T ./scripts/module-common.lds --build-id  -o /home/student/krishna/linux/kernel/third/third/usb2.ko /home/student/krishna/linux/kernel/third/third/usb2.o /home/student/krishna/linux/kernel/third/third/usb2.mod.o

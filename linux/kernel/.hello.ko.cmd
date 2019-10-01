@@ -1,0 +1,1 @@
+cmd_/home/student/krishna/linux/kernel/hello.ko := ld -r -m elf_i386 -T ./scripts/module-common.lds --build-id  -o /home/student/krishna/linux/kernel/hello.ko /home/student/krishna/linux/kernel/hello.o /home/student/krishna/linux/kernel/hello.mod.o

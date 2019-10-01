@@ -1,0 +1,6 @@
+echo "enter the number which table needs to be displayed"
+read no
+for i in `seq 10`
+do 
+echo "$no * $i =" `expr $no \* $i`  
+done

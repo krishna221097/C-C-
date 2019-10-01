@@ -1,0 +1,38 @@
+#!/bin/bash
+#To store information
+#Created by Sri Krishna V
+#created on 01/10/2019
+
+echo "If you want to enter record press 'y' else 'n' "
+ans='y'
+
+while [ $ans = 'y' ]
+do
+
+echo "Enter your roll no"
+read rollno
+echo "Enter your name"
+read name
+echo "Enter company name"
+read compname
+echo "subject 1 mark"
+read s1
+echo "subject 2 mark"
+read s2
+echo "subject 3 mark"
+read s3
+tot=`expr $s1 + $s2 + $s3`
+per=`expr $tot / 3`
+echo "Rollno :$rollno , Name :$name , Company :$compname , Subject1 mark:$s1 ,Subject2 mark:$s2 ,Subject3 mark:$s3 Total :$tot 		Percentage :$per" 
+read ans
+done
+#sleep 10
+if [ $per -ge 80 -a $per -lt 100 ]
+then
+echo "Rollno :$rollno , Name :$name , Company :$compname , Subject1 mark:$s1 ,Subject2 mark:$s2 ,Subject3 mark:$s3 Total :$tot Percentage :$per grade :destinction" >>data
+elif [ $per -ge 70 -a $per -lt 80 ]
+then
+echo "Rollno :$rollno , Name :$name , Company :$compname , Subject1 mark:$s1 ,Subject2 mark:$s2 ,Subject3 mark:$s3 Total :$tot Percentage :$per grade :first-class" >>data
+else
+echo "Rollno :$rollno , Name :$name , Company :$compname , Subject1 mark:$s1 ,Subject2 mark:$s2 ,Subject3 mark:$s3 Total :$tot Percentage :$per grade :pass" >>data
+fi
