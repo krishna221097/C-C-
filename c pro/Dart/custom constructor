@@ -1,0 +1,41 @@
+class Student
+{
+  int id=-1;
+  String name;
+  
+  Student(this.id,this.name);
+  
+  Student.customConstructor()
+  {
+    print("custom constructor");
+  }
+  Student.customConstructor2(this.id,this.name);
+  
+  void study()
+  {
+    print("${this.name} is now studying");
+  }
+  void sleep()
+  {
+    print("${this.name} is now sleeping");
+  }
+}
+
+void main()
+{
+  var s1=Student(1,"Krishna");
+  
+  print("${s1.id} ${s1.name}");
+  s1.study();
+  s1.sleep();
+  
+  
+  var s2=Student.customConstructor();
+  s2.id=2;
+  s2.name="kumar";
+  print("${s2.id}  ${s2.name}");
+  
+  var s3=Student.customConstructor2(3,"Selva");
+    print("${s3.id}  ${s3.name}");
+  
+}
